@@ -172,15 +172,14 @@
         console.log("ID Token: " + id_token);
       };
     </script>
+<a href="#" onclick="signOut();">Sign out</a>
 <script>
-function signOut() {
-  var auth2 = gapi.auth2.getAuthInstance();
-  auth2.signOut().then(function () {
-    console.log('User signed out.');
-    var data = 'There is no user signed in';
-    document.getElementsByClassName("g-signin3")[0].innerHTML =data;
-  });
-}
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
 </script>
 	</body>
 </html>
