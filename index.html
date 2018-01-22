@@ -13,14 +13,10 @@
 		<title>Vikas Electrical</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="google-signin-scope" content="profile email">
-                <meta name="google-signin-client_id" content="796685883870-mvlnvgkv4o9vga25i9ilfmgm5oadmuko.apps.googleusercontent.com">
-                <script src="https://apis.google.com/js/platform.js" async defer></script>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" href="Downloads/favicon.png" type="image/png" sizes="16x16">
 	</head>
 	<body>
-		
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
@@ -40,8 +36,8 @@
 							<ul class="links">
 								<li><a href="index.html">Home</a></li>
 								<li><a href="https://www.payumoney.com/paybypayumoney/#/B8F58290D43CD343F17BE117620E5C8A">Payments</a></li>
-								<li><div class="g-signin2" data-onsuccess="onSignIn" data-theme="light" align="center">Sign In</div></li>
-								<li><div class="fb-login-button" data-width="50"></div></li>
+								<li><a href="#">Log In<sup>Beta</sup></a></li>
+								<li><a href="#">Sign Up<sup>Beta</sup></a></li>
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
@@ -158,36 +154,6 @@
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-<script>
-      function onSignIn(googleUser) {
-        // Useful data for your client-side scripts:
-        var profile = googleUser.getBasicProfile();
-        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-        console.log('Full Name: ' + profile.getName());
-        console.log('Given Name: ' + profile.getGivenName());
-        console.log('Family Name: ' + profile.getFamilyName());
-        console.log("Image URL: " + profile.getImageUrl());
-        console.log("Email: " + profile.getEmail());
-        // The ID token you need to pass to your backend:
-        var id_token = googleUser.getAuthResponse().id_token;
-        console.log("ID Token: " + id_token);
-      };
-    </script>
-<script>
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
-</script>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=286553245206351&autoLogAppEvents=1';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+
 	</body>
 </html>
