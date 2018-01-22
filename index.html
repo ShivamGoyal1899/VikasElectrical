@@ -39,7 +39,8 @@
 							<ul class="links">
 								<li><a href="index.html">Home</a></li>
 								<li><a href="https://www.payumoney.com/paybypayumoney/#/B8F58290D43CD343F17BE117620E5C8A">Payments</a></li>
-								<div class="g-signin2" data-onsuccess="onSignIn" data-theme="light" align="center"></div>
+								<li><div class="g-signin2" data-onsuccess="onSignIn" data-theme="light" align="center"></div></li>
+								<li><a href="#" onclick="signOut();">Sign out</a></li>
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
@@ -171,6 +172,15 @@
         console.log("ID Token: " + id_token);
       };
     </script>
-
+<script>
+function signOut() {
+  var auth2 = gapi.auth2.getAuthInstance();
+  auth2.signOut().then(function () {
+    console.log('User signed out.');
+    var data = 'There is no user signed in';
+    document.getElementsByClassName("g-signin3")[0].innerHTML =data;
+  });
+}
+</script>
 	</body>
 </html>
