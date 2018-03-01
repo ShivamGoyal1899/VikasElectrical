@@ -1,1 +1,0 @@
-# vikaselectrical.tk
